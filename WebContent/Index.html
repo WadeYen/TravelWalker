@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+		
+		<meta charset="UTF-8">
+		<title>Travel Walker</title>
+		<link rel="stylesheet" type="text/css" href="spiffyCal/spiffyCal_v2_1.css">
+    	<script type="text/javascript" src="spiffyCal/spiffyCal_v2_1.js"></script>
+    	<script type="text/javascript">
+      		var dateAvailable = new ctlSpiffyCalendarBox("dateAvailable", "new_product", "products_date_available","btnDate1","");
+    	</script>  
+	</head>
+	<body>
+		<h1>輸入您的行程需求</h1>
+		<img src="https://img.icons8.com/material/24/000000/shopping-cart.png"/>
+
+		<form method = 'post' action = "schedulelist">
+			<a href="http://localhost:8081/TravelWalker/login.html">登入</a><br>
+			出發日期：<input type = "date" name = "start"/><br>
+			回程日期：<input type = "date" name = 'end'/><br>
+			地區：<select name = 'country' size=1>
+					<option value = 'selected'>(請選擇)</option>
+					<option value = '日本'>日本</option>
+					<option value = 'US'>美國</option>
+				</select><br>
+			行程：<input type = 'checkbox' name = "schedule[]" value = 'park'/>公園
+				<input type = 'checkbox' name = "schedule[]" value = 'zoo'/>動物園/水族館
+				<input type = 'checkbox' name = "schedule[]" value = 'science'/>科學博物館
+				<input type = 'checkbox' name = "schedule[]" value = 'history'/>人文歷史博物館
+				<input type = 'checkbox' name = "schedule[]" value = 'shopping' />商圈/購物中心
+				<input type = 'checkbox' name = "schedule[]" value = 'amusement park'checked/>遊樂園<br>
+<!--			飲食：<input type = 'checkbox' name = "store[]" value = '0' />特色餐
+				<input type = 'checkbox' name = "store[]" value = '1' />點心
+				<input type = 'checkbox' name = "store[]" value = '2' />茶飲
+				<input type = 'checkbox' name = "store[]" value = '3' />品酒
+				<input type = 'checkbox' name = "store[]" value = '4' />素食
+				<br>
+				
+			婚姻：<select name = 'marriage'>
+					<option value = '未婚'>未婚</option>
+					<option value = '已婚'>已婚</option>
+					
+				</select><br>
+				-->
+			<input type ='submit' value = '送出' />
+			
+				
+		</form>
+	
+
+	</body>
+</html>
